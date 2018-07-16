@@ -1,0 +1,19 @@
+  <div class="jumbotron heading">
+    <div>
+      <div style="float:left;width:30%;margin-right: 0px;">
+        <img src="https://profile.actionsprout.com/default.jpeg" alt="Cinque Terre" width="200px" style="border-radius: 10rem ">
+      </div>
+
+      <div style="float:right;width:70%;">
+        <b>
+          <h1 style="color: white">{{user.User.fName}} {{user.User.lName}}</h1>
+        </b>
+        <h3 style="color: white">Followers:{{user.User.FollowerCount }} Followings{{user.User.FollowingCount }}</h3>
+        <br>
+      </div>
+      <div style="clear:both; font-size:1px;"></div>
+    </div>
+  </div>
+  <h3>
+  </h3>
+<app-tweet [tweets]="user.Tweets"></app-tweet>

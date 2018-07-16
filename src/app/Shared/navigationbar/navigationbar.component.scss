@@ -1,0 +1,5 @@
+@import '../CommonStyling';
+@import '../mixin';
+.flex-container{
+    @include navbar;
+}

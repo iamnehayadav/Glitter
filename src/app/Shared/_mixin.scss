@@ -1,0 +1,126 @@
+@mixin navbar{
+    display: flex;
+    /* flex-wrap: nowrap; */
+    background-color: $primary-color;
+    a{
+        color: white;
+        padding: 16px 20px;
+        text-decoration: none;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        &:hover{
+            background-color: $hover-color;
+        }
+    }
+}
+
+@mixin subnavbar{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $primary-color;
+    a{
+        color: white;
+        padding: 8px 20px;
+        text-decoration: none;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 18px;
+        &:hover{
+            background-color: $hover-color;
+        }
+    }
+}
+
+//==============================================LOGIN/REGISTER================================================
+@mixin homepage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 800px; */
+    min-height: 100vh;
+    .page{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0% 2% 2%;
+        border: 1px solid #ccc;
+    }
+}
+
+@mixin image{
+    width: 50%;
+    padding : 10px 0px; 
+    margin:auto;
+}
+
+@mixin enterbtn{
+    background-color: $primary-color;
+    color : white;
+    padding: 10px;
+    width : 100%;
+    margin: 8px 0;
+    display: block;
+    border: 0px;
+}
+
+@mixin cancelbtn{
+    background-color: rgb(204, 204, 201);
+    color : black;
+    display: block;
+    padding: 10px;
+    width : 100%;
+    margin: 8px 0;
+    border: 0px;
+}
+
+@mixin inputtag{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+@mixin welcometag{
+    color: $primary-color; 
+    margin: auto; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 30px;
+}
+
+//===============================================SEARCH/TWEET COMPONENTS========================================
+@mixin searchinput($width){
+    width: $width;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+@mixin searchbtn($width){
+    background-color: $primary-color;
+    color : white;
+    /* display: block; */
+    padding: 10px;
+    width : $width;
+    margin: 8px 0;
+    border: 0px;
+}
+
+@mixin tweetcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width : 100%;
+    .page{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width : 100%;
+  }
+}

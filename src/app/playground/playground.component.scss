@@ -1,0 +1,19 @@
+@import '../Shared/CommonStyling';
+@import '../Shared/mixin';
+// .flex-container{
+//     @include navbar;
+// }
+
+.btn{
+  background-color: $primary-color;
+  color : white;
+  padding: 10px;
+  width : 100%;
+  margin: 8px 0;
+  display: block;
+  border: 0px;
+}
+
+.header{
+  background-color: $secondary-color;
+}

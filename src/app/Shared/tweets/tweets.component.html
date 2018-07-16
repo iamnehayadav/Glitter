@@ -1,0 +1,88 @@
+<div class="container">
+  <div class="page">
+
+    <div style="width: 100%; margin: auto" *ngFor="let tweet of tweets">
+      <div class="card">
+        <div class="card-header" style="background-color:rgb(250, 185, 221)">
+          <b>{{tweet.FName}} {{tweet.LName}}</b>&nbsp;&nbsp;&nbsp;{{tweet.CreatedAt}}
+          <div style="text-align: right; width: 40%; float: right;" *ngIf="checkUser(tweet.UID)">
+            <a class="btn btn-primary" style="width: 23%; background-color: rgb(201, 8, 104); color: white; padding: 4px" (click)="editTweet(tweet.TID)"
+              data-toggle="modal" data-target="#editModal">Edit</a>
+            <a class="btn btn-primary" style="width: 23%; background-color: rgb(201, 8, 104); color: white; padding: 4px" (click)="deleteTweet(tweet.TID)">Delete</a>
+          </div>
+        </div>
+        <div class="card-body">
+          <hr>
+          <p class="card-text">{{tweet.Tweet}}</p>
+          <hr>
+          <div style="text-align: left; width: 60%; float: left;">
+            <a routerLink="/reaction">{{tweet.LCount}}</a>
+            <a class="btn btn-primary" style="width: 30%; background-color: rgb(201, 8, 104); padding: 4px; color: white;" (click)="like(tweet.TID)">Like</a>
+            <a routerLink="/reaction">{{tweet.DCount}}</a>
+            <a class="btn btn-primary" style="width: 30%; background-color: rgb(201, 8, 104); padding: 4px; color: white;" (click)="dislike(tweet.TID)"
+              id="d">Dislike</a>
+            <a class="btn btn-primary" style="width: 30%; background-color: rgb(201, 8, 104); padding: 4px; color: white;" (click)="viewTweet(tweet.TID)"
+              id="d" data-toggle="modal" data-target="#viewModal">View</a>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
+
+<div id="editModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div style="width: 100%; margin: auto">
+          <div class="card">
+            <div class="card-header" style="background-color:rgb(250, 185, 221)">
+              Add new tweet here :
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="usr">Message :</label>
+                <textarea rows="5" cols="50" class="form-control" id="usr" #message>{{prevMessage}}</textarea>
+              </div>
+              <hr>
+              <a class="btn btn-primary" style="width: 45%; background-color: rgb(201, 8, 104); color: white; margin-left: 0px; margin-right: auto"
+                (click)="submitTweet(message.value)" data-dismiss="modal">Ok</a>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =========================================VIEW TWEET========================================== -->
+<div id="viewModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div style="width: 100%; margin: auto">
+          <div class="card">
+            <div class="card-header" style="background-color:rgb(250, 185, 221)">
+              Tweet :
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="usr">Message :</label>
+                <textarea rows="5" cols="50" class="form-control" id="usr" #message>{{requiredTweet}}</textarea>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

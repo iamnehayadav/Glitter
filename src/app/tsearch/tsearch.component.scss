@@ -1,0 +1,25 @@
+@import '../Shared/CommonStyling';
+@import '../Shared/mixin';
+// .flex-container{
+//     @include navbar;
+// }
+
+.sub-flex-container {
+  @include subnavbar;
+}
+
+  .btn{
+    @include searchbtn(12%);
+  }
+
+  div > input[type=text], select {
+    @include searchinput(18%);
+}
+
+.container{
+  @include tweetcontainer;
+}
+
+.header{
+  background-color: $secondary-color;
+}

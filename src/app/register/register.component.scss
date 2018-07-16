@@ -1,0 +1,32 @@
+@import '../Shared/CommonStyling';
+@import '../Shared/mixin';
+.container{
+    @include homepage;
+}
+
+.image{
+    @include image;
+}
+
+.inpLabel{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.registerbtn{
+    @include enterbtn;
+}
+
+.cancelbtn{
+    @include cancelbtn;   
+}
+
+input[type=text],[type=password], select {
+    @include inputtag;
+}
+
+p{
+    @include welcometag;
+}
+
+

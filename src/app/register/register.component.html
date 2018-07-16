@@ -1,0 +1,87 @@
+<!-- <div class="container">
+  <img src="https://cdn.dribbble.com/users/5976/screenshots/1991773/g_monogram_gravity_colorful_paths_depth_logo_design_symbol_by_alex_tass.jpg"
+    class="rounded-circle" alt="Cinque Terre" width="304" height="236">
+  <p class="font-weight-bold" style="font: 30px sans-serif; color: mediumvioletred">Welcome to Glitter !</p>
+</div>
+
+<div class="container">
+  <form action="/action_page.php" >
+    <div class="form-group">
+      <label for="pwd">First Name:</label>
+      <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="pswd" #fName required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Last Name:</label>
+      <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="pswd" #lName required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" #email required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" #password required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Phone Number:</label>
+      <input type="text" class="form-control" id="phno" placeholder="Enter phone number" name="pswd" #phoneNumber required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Select Country</label>
+      <select class="form-control" #country required>
+        <option *ngFor="let country of countries">
+          {{country}}
+        </option>
+      </select>
+    </div>
+   
+    <button type="submit" class="btn btn-info" (click) = "sendRegisterDetails(fName.value,lName.value,email.value,password.value,phoneNumber.value,country.value)">Submit</button>
+  </form>
+  <br>
+  <a href="/">Already a user? Signin</a>
+  <br>
+  <p></p>
+</div> -->
+
+<div class="container">
+  <div class="page">
+    <img src="https://cdn.dribbble.com/users/5976/screenshots/1991773/g_monogram_gravity_colorful_paths_depth_logo_design_symbol_by_alex_tass.jpg"
+      class="image">
+      <p>Welcome to Glitter !</p>
+    <form>
+      <div class="inpLabel">First Name</div>
+      <input type="text" placeholder="Enter First Name" id="fname" name="email" #fName>
+
+      <div class="inpLabel">Last Name</div>
+      <input type="text" placeholder="Enter Last Name" id="lname" name="email" #lName>
+
+      <div class="inpLabel">Email</div>
+      <input type="text" placeholder="Enter Email id" id="email" name="email" #email>
+
+      <div class="inpLabel">Password</div>
+      <input type="password" placeholder="Enter Password" id="pwd" name="pswd" #password>
+
+      <div class="inpLabel">Phone Number</div>
+      <input type="text" placeholder="Enter Phone Number" id="phno" name="email" #phoneNumber>
+
+      <a>
+        <div class="inpLabel">Country</div>
+      </a>
+
+      <div class="control">
+          <div class="select">
+            <select #country>
+              <option *ngFor="let country of countries">{{country}}</option>
+            </select>
+          </div>
+        </div>
+
+      <br>
+      <button type="submit" (click)="sendRegisterDetails(fName.value,lName.value,email.value,password.value,phoneNumber.value,country.value)"
+        class="registerbtn">Register</button>
+
+      <button type="reset" class="cancelbtn">Cancel</button>
+    </form>
+    <a href="/" class="inpLabel">Already a user? Signin</a>
+  </div>
+</div>

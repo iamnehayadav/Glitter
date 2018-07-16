@@ -1,0 +1,35 @@
+  // .sub-flex-container {
+  //   display: flex;
+  //   background-color: $primary-color;
+  // }
+  
+  // .sub-flex-container a{
+  //   color: white;
+  //   padding: 8px 20px;
+  //   text-decoration: none;
+  //   text-align: center;
+  //   font-family: 'Courier New', Courier, monospace;
+  //   font-size: 18px;
+  // }
+
+  // .sub-flex-container a:hover{
+  //     background-color: $hover-color;
+  // }
+
+@import '../Shared/CommonStyling';
+@import '../Shared/mixin';
+// .flex-container{
+//     @include navbar;
+// }
+
+.btn{
+    @include searchbtn(15%);
+}
+
+div > input[type=text], select {
+  @include searchinput(25%);
+}
+
+.container{
+  @include tweetcontainer;
+}
